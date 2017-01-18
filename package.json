@@ -1,10 +1,10 @@
 {
-  "name": "static-site-gen",
+  "name": "tickle-js-ssg",
   "version": "0.1.0",
   "description": "a little js static site generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Write some tests!\" && exit 1"
   },
   "keywords": [
     "static",
