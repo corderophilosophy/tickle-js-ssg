@@ -1,6 +1,6 @@
 {
   "name": "tickle-js-ssg",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "a little js static site generator",
   "main": "./src/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   ],
   "author": "Dr. Rich Cordero <rich@corderophilosophy.com> (http://corderophilosophy.com)",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "fs-extra": "^2.0.0",
     "marked": "^0.3.6",
     "rimraf": "^2.5.4"
