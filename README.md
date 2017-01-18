@@ -10,7 +10,7 @@ So it was either learn Ruby or write something in JavaScript (something about Ru
 
 ✨ Jackpot! ✨
 
-Tickle is heckle adapted (_read: simplified_) for my own needs.
+Tickle is heckle adapted (_read: simplified_) for my own needs. It's also not *nearly* ready for actual use. Happy to welcome contribs, though 😄
 
 
 <!-- TODO: Write `Usage` section -->
