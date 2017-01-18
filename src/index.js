@@ -13,11 +13,11 @@ const generate = require('./generate');
 
 const Options = { blog: './_posts', build: './build', template: './src/templates/post.html' };
 
-function build(options = Options) {
+function Tickle(options = Options) {
   const posts = readFiles(options.blog);
   const Posts = renderPosts(posts, options.template);
   clean(options.build);
   generate(options.build, Posts);
 }
 
-module.exports = build;
+module.exports = Tickle;
