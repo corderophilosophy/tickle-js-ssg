@@ -1,3 +1,4 @@
+'use strict';
 /*
   The code herein (in this project, not just this file) is in large part [influenced and/or adaptations of and/or copies of] the code in Marijn Haverbeke's `heckle` -- whose source is at https://github.com/marijnh/heckle
 */
@@ -7,15 +8,16 @@ const readFiles = require('./readFiles');
 const clean = require('./clean');
 const generate = require('./generate');
 
-// Change `BLOG_DIR` and `BUILD_DIR` to suit needs.
-const BLOG_DIR = './test';
-const BUILD_DIR = './build';
+//  call `build` with an `options` object with three properties:
+//    blog, build, and template
 
-function build() {
-  const posts = readFiles(BLOG_DIR);
-  const Posts = renderPosts(posts);
-  clean(BUILD_DIR);
-  generate(BUILD_DIR, Posts);
+const Options = { blog: './test', build: './build', template: './src/templates/post.html' };
+
+function build(options) {
+  const posts = readFiles(options.blog);
+  const Posts = renderPosts(posts, options.template);
+  clean(options.build);
+  generate(options.build, Posts);
 }
 
-build();
+build(Options)

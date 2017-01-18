@@ -1,3 +1,4 @@
+'use strict';
 // expects a string of associated key: "value" pairs, separated by \n
 module.exports = function convertStrToObj(string) {
   if (typeof string !== 'string') {

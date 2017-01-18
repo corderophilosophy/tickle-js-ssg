@@ -1,3 +1,4 @@
+'use strict';
 //  exports.exists taken from:
 //  https://github.com/marijnh/heckle/blob/master/util.js(.exists)
 // which is under the MIT license, which is the same license as this project

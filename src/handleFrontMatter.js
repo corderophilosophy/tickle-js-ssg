@@ -1,3 +1,4 @@
+'use strict';
 const convertStrToObj = require('./stringToObj');
 
 module.exports = function frontMatter(data) {
