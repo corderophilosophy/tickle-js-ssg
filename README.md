@@ -10,7 +10,25 @@ So it was either learn Ruby or write something in JavaScript (something about Ru
 
 ✨ Jackpot! ✨
 
-Tickle is heckle adapted (_read: simplified_) for my own needs. It's also not *nearly* ready for actual use. Happy to welcome contribs, though 😄
+Tickle is heckle adapted (*read: simplified*) for my own needs. It's also not *nearly* ready for actual use. Happily welcoming contribs 😄
 
 
-<!-- TODO: Write `Usage` section -->
+## Usage:
+Install with `npm`: `npm install -D tickle-js-ssg`
+Then
+```javascript
+'use strict';
+const Tickle = require('tickle-js-ssg');
+const Options = {
+  blog: './src/blog/drafts', // .md, .markdown, .html
+  build: './build/blog/posts', // output folder, based on template ⬇️
+  template: './src/blog/template/post.html' // template, as per ⬆️
+};
+// Tickle must be passed an object with three properties:
+//    obj.blog, obj.build, obj.template
+function generate() {
+  Tickle(Options);
+};
+
+generate(); // run generate() to :rocket:
+```
