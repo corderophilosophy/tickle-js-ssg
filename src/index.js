@@ -11,13 +11,13 @@ const generate = require('./generate');
 //  call `build` with an `options` object with three properties:
 //    blog, build, and template
 
-const Options = { blog: './test', build: './build', template: './src/templates/post.html' };
+const Options = { blog: './_posts', build: './build', template: './src/templates/post.html' };
 
-function build(options) {
+function build(options = Options) {
   const posts = readFiles(options.blog);
   const Posts = renderPosts(posts, options.template);
   clean(options.build);
   generate(options.build, Posts);
 }
 
-build(Options)
+module.exports = build;
