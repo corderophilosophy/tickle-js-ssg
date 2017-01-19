@@ -1,6 +1,6 @@
 ---
 title: "Test markdown"
-base: "post.html"
+base: "default.html"
 ---
 
 # This is a test!

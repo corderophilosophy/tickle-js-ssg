@@ -1,7 +1,7 @@
 {
   "name": "tickle-js-ssg",
-  "version": "0.2.4",
-  "description": "a little js static site generator",
+  "version": "0.3.4",
+  "description": "a little thing",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Write some tests!\" && exit 1"

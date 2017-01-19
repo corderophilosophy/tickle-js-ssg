@@ -1,6 +1,6 @@
 ---
 title: "Still another Test!"
-base: "post.html"
+base: "default.html"
 ---
 
 # This is another test!

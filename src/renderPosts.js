@@ -3,16 +3,19 @@ const fs = require('fs-extra');
 const util = require('./utils');
 
 module.exports = function renderPosts(posts, template) {
-  if (!util.exists(template)) {
-    fs.writeFileSync('./src/templates/default.html');
+  if (!Array.isArray(posts)) {
+    posts = [posts];
   }
-  const templ = fs.readFileSync(template, 'utf8').toString();
+  if (!util.exists(template)) {
+    throw new Error('Error renderong posts. Check config.json.post_template');
+  }
   const Posts = posts.map((post) => {
+    let templ = fs.readFileSync(template, 'utf8').toString();
     let t = templ;
     t = t.replace('{{title}}', post.frontMatter.title);
     t = t.replace('{{content}}', post.main);
     let p = Object.assign(post, {main: t});
     return p;
-  })
+  });
   return Posts;
 };
