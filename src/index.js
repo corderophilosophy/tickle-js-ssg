@@ -17,4 +17,5 @@ function Tickle(config = Config) {
   generate(config.build_dir, Posts);
 }
 
-module.exports = Tickle;
+// module.exports = Tickle;
+Tickle(Config);

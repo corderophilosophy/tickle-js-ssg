@@ -11,7 +11,7 @@ module.exports = function readFiles(path) {
     if (!date) {
       return;
     }
-    const d = `${date[3]}.${date[2]}.${date[1]}`
+    const d = `${date[1]}/${date[2]}/${date[3]}`;
     const post = parser(path + '/' + file);
     const name = date[4];
     const Post = Object.assign(post, { main: marked(post.main), name: name, date: d });
