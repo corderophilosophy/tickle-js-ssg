@@ -7,7 +7,7 @@ module.exports = function renderPosts(posts, template) {
     posts = [posts];
   }
   if (!util.exists(template)) {
-    throw new Error('Error renderong posts. Check config.json.post_template');
+    throw new Error('Error renderong posts. Check ./_config.json.post_template');
   }
   const Posts = posts.map((post) => {
     let templ = fs.readFileSync(template, 'utf8').toString();
