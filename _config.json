@@ -1,6 +1,10 @@
 {
   "site_url": "corderophilosophy.com/",
-  "build_dir": "./build/blog/posts",
-  "blog_dir": "./src/blog/posts",
-  "post_template": "./src/blog/templates/default.html"
+  "paths": {
+    "base_dir": "./_site",
+    "blog_dir": "./_site/blog/posts",
+    "templates": "./_site/_templates",
+    "includes": "./_site/_includes",
+    "output_dir": "./public_html"
+  }
 }

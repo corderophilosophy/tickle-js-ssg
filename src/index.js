@@ -11,7 +11,7 @@ const generate = require('./generate');
 const Config = require('../_config.json');
 
 function Tickle(config = Config) {
-  const posts = readFiles(config.blog_dir);
+  const posts = readFiles(config);
   const Posts = renderPosts(posts, config.post_template);
   clean(config.build_dir);
   generate(config.build_dir, Posts);
