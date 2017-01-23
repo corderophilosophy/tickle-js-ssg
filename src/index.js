@@ -4,17 +4,23 @@
 */
 
 const renderPosts = require('./renderPosts');
-const readFiles = require('./readFiles');
+const readFiles = require('./newReadFiles');
 const clean = require('./clean');
-const generate = require('./generate');
+const generatePosts = require('./generatePosts');
 
 const Config = require('../_config.json');
 
 function Tickle(config = Config) {
-  const posts = readFiles(config);
-  const Posts = renderPosts(posts, config.post_template);
-  clean(config.build_dir);
-  generate(config.build_dir, Posts);
+  const SITE = Config.site_url,
+  BASEPATH = Config.base_path,
+  TEMPLPATH = Config.base_path + config.paths.templates,
+  INCLPATH = Config.base_path + config.paths.includes,
+  BLOGPATH = Config.base_path + config.paths.blog;
+  const posts = readFiles(BASEPATH);
+  // const Posts = renderPosts(posts, paths.templates);
+  // clean(config.paths.output_dir);
+  // generatePosts(config.paths.output_dir, Posts);
 }
 
-module.exports = Tickle;
+// module.exports = Tickle;
+Tickle(Config);

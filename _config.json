@@ -1,10 +1,10 @@
 {
-  "site_url": "corderophilosophy.com/",
+  "site_url": "corderophilosophy.com",
+  "base_path": "./_site",
   "paths": {
-    "base_dir": "./_site",
-    "blog_dir": "./_site/blog/posts",
-    "templates": "./_site/_templates",
-    "includes": "./_site/_includes",
-    "output_dir": "./public_html"
-  }
+    "templates": "/_templates",
+    "includes": "/_includes",
+    "blog": "/blog/posts"
+  },
+  "output": "./public_html"
 }
