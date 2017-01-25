@@ -2,6 +2,6 @@
 const fs = require('fs-extra');
 const p = require('path');
 
-module.exports = function(site) {
-  console.log(site);
+module.exports = function build(site, config) {
+  console.log(site.blog);
 };

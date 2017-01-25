@@ -15,7 +15,7 @@ function Tickle(config = Config) {
   const _site = readFiles(config.base_path);
   clean(config.output);
   const Site = generate(_site, config.output);
-  build(Site);
+  build(Site, config);
 }
 
 // module.exports = Tickle;

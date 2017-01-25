@@ -8,7 +8,7 @@ module.exports = function renderPosts(posts, path) {
   }
   fs.ensureDirSync(path);
   const Posts = posts.map((post) => {
-    const templPath = `${path}/${post.frontMatter.base}`;
+    const templPath = `${path}/${post.frontMatter.template}`;
     let templ = fs.readFileSync(templPath, 'utf8').toString();
     // let t = templ;
     // t = t.replace('{{title}}', post.frontMatter.title);
