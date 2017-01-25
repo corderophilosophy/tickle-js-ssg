@@ -3,22 +3,21 @@ const fs = require('fs-extra');
 const p = require('path');
 
 module.exports = function readFiles(path) {
-  fs.readdirSync(path).forEach((item) => {
-    console.log(item);
-    const thisDir = p.join('./', path, item);
-    if (item == '_includes') {
-      console.log(item);
-    }
-    if (item == '_templates') {
-      console.log(item);
-    } else {
-      console.log('Neither templ nor incl ' + (item = '_includes') ? 'what the hell?' : item);
-    }
+  const _includes = [], _templates = [], blog = [];
+  fs.readdirSync(path).map((item) => {
+    const thisDir = p.join(path, item);
+    fs.readdirSync(thisDir).map((Item) => {
+      const thisItem = p.join(thisDir, Item);
+      if (item == '_includes') {
+        _includes.push(thisItem);
+      }
+      if (item == '_templates') {
+        _templates.push(thisItem);
+      }
+      if (item == 'blog') {
+        blog.push(thisItem);
+      }
+    })
   });
+  return { _includes, _templates, blog };
 }
-
-
-// Directories[item] = item;
-// let thisDir = paths[p];
-// fs.ensureDirSync(thisDir);
-// }

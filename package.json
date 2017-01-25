@@ -20,5 +20,8 @@
     "fs-extra": "^2.0.0",
     "marked": "^0.3.6",
     "rimraf": "^2.5.4"
+  },
+  "devDependencies": {
+    "uuid-v4": "^0.1.0"
   }
 }
