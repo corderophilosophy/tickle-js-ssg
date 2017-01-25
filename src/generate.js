@@ -21,9 +21,11 @@ module.exports = function generate(site, outputDir) {
           throw new Error(`Incorrect filetype in ${site[dir]}`)
         }
       } else if (fs.statSync(item).isDirectory() && dir == 'blog') {
-        Site.blog = handleBlog(item);
+        Site[dir] = handleBlog(item);
+      } else {
+        Site[dir] = site[dir];
       }
     })
   }
-  // console.log(Site);
+  return Site;
 }

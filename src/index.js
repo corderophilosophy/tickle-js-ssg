@@ -6,14 +6,16 @@
 const renderPosts = require('./renderPosts');
 const readFiles = require('./newReadFiles');
 const clean = require('./clean');
-const generatePosts = require('./generate');
+const generate = require('./generate');
+const build = require('./build');
 
 const Config = require('../_config.json');
 
 function Tickle(config = Config) {
-  const Site = readFiles(config.base_path);
+  const _site = readFiles(config.base_path);
   clean(config.output);
-  generatePosts(Site, config.output);
+  const Site = generate(_site, config.output);
+  build(Site);
 }
 
 // module.exports = Tickle;
