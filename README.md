@@ -36,9 +36,8 @@ Sample `_config.json` file with the following keys -- insert your own values:
 ```json
 {
   "site_url": "",
-  "build_dir": "./build/blog/posts",
-  "blog_dir": "./src/blog/posts",
-  "post_template": "./src/blog/templates/default.html"
+  "base_path": "./build/blog/posts",
+  "output": "./src/blog/posts"
 }
 ```
 NB: At the moment, `site_url` is not used.
