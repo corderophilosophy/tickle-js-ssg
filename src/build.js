@@ -2,8 +2,6 @@
 const fs = require('fs-extra');
 const p = require('path');
 
-const handleIncludes = require('./handleIncludes');
-
 module.exports = function build(site, config) {
   const { blog, _includes, _templates } = site;
   let rest = Object.assign({}, site);
