@@ -2,7 +2,7 @@
 const fs = require('fs-extra');
 const p = require('path');
 
-module.exports = function readFiles(path) {
+module.exports = function getPaths(path) {
   const Site = {};
   fs.readdirSync(path).map((item) => {
     const thisDir = p.join(path, item);

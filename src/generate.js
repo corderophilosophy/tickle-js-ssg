@@ -4,14 +4,13 @@ const fs = require('fs-extra');
 const handleFiles = require('./handleFiles');
 const handleBlog = require('./handleBlog');
 
-module.exports = function generate(site, outputDir) {
+module.exports = function generate(site) {
   const Site = {
     _includes: {},
     _templates: {},
     blog: {},
   };
   const regexp = /(\w+)\.[html|md|markdown]/;
-  fs.ensureDirSync(outputDir);
   for (let dir in site) {
     site[dir].map((item) => {
       if (fs.statSync(item).isFile()) {

@@ -1,6 +1,6 @@
 ---
 title: "Test markdown"
-template: "default.html"
+template: "default"
 ---
 
 # This is a test!

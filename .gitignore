@@ -1,4 +1,4 @@
 node_modules
-build
-old_build
+public_html
+old_public_html
 npm-debug.log

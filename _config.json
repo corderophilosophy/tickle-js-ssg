@@ -1,10 +1,5 @@
 {
   "site_url": "corderophilosophy.com",
   "base_path": "./_site",
-  "paths": {
-    "templates": "/_templates",
-    "includes": "/_includes",
-    "blog": "/blog/posts"
-  },
   "output": "./public_html"
 }
