@@ -25,7 +25,7 @@ module.exports = function build(site, config) {
   for (let path in rest) {
     for (let dir in rest[path]) {
       const destination = rest[path][dir].replace('_site', 'public_html');
-      fs.copy(rest[path][dir], destination);
+      fs.copySync(rest[path][dir], destination);
     }
   }
 };

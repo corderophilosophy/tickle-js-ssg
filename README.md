@@ -32,15 +32,15 @@ function generate() {
 generate(); // run generate() to :rocket:
 ```
 
-Sample `_config.json` file with the following keys -- insert your own values:
+Your `_config.json` ought to looks like this:
 ```json
 {
   "site_url": "",
-  "base_path": "./build/blog/posts",
-  "output": "./src/blog/posts"
+  "base_path": "./_site",
+  "output": "./public_html"
 }
 ```
 NB: At the moment, `site_url` is not used.
 
 ## WIP:
-📆  I'll be adding support for, among other things, partials (at some point) and automatic generation of an index of posts, based on a given a template.
+📆  I'll be adding support for, among other things, partials (~~at some point~~ this is currently being worked on) and automatic generation of an index of posts, based on a given a template.
