@@ -8,9 +8,7 @@ const clean = require('./clean');
 const generate = require('./generate');
 const build = require('./build');
 
-const Config = require('../_config.json');
-
-function Tickle(config = Config) {
+function Tickle(config) {
   const _site = getPaths(config.base_path);
   const Site = generate(_site);
   clean(config.output);
@@ -18,4 +16,3 @@ function Tickle(config = Config) {
 }
 
 module.exports = Tickle;
-// Tickle(Config);
