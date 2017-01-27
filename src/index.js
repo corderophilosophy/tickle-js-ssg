@@ -15,5 +15,4 @@ function Tickle(config) {
   build(Site, config);
 }
 
-// module.exports = Tickle;
-Tickle(require('../_config'));
+module.exports = Tickle;

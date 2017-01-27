@@ -1,6 +1,10 @@
 {
   "name": "tickle-js-ssg",
+<<<<<<< HEAD
   "version": "0.4.4",
+=======
+  "version": "0.4.3",
+>>>>>>> 3f3611e4c1be06f86514b417c1bf405caf8774f9
   "description": "a little thing",
   "main": "./src/index.js",
   "scripts": {
