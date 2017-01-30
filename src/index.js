@@ -13,6 +13,8 @@ function Tickle(config) {
   const _site = getPaths(config.base_path);
   const Site = generate(_site);
   build(Site, config);
+  console.log(Site);
 }
 
-module.exports = Tickle;
+// module.exports = Tickle;
+Tickle(require('../_config.json'));

@@ -14,7 +14,7 @@ module.exports = function getPaths(path) {
         }
         Site[item].push(thisItem);
       });
-    } else if (fs.statSync(item).isFile()) {
+    } else if (fs.statSync(path + '/' + item).isFile()) {
       const thisFile = p.join(path, item);
       if (!Site[item]) {
         Site[item] = [];

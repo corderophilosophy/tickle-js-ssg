@@ -16,14 +16,67 @@ Basically, you point tickle to a directory of markdown files and a template for 
 
 
 ## Usage:
+
+Currently, `Tickle` expects your project directory to contain the following:
+```
+_site
+├── blog
+│   └── posts
+├── _includes
+└── _templates
+```
+Posts will be generated based on the template specified in the post's frontmatter.
+
+### _includes
+
+Partials can be placed in your `_includes` folder. Then, e.g. `header.html`, can be injected in your templates with `{{>header}}`.
+
+```
+/* _includes/header.html*/
+<header>
+  <h1>Site Header 😆</h1>
+</header>
+```
+
+```
+/* _templates/default.html */
+
+<!DOCTYPE html>
+<html>
+  ...
+  <body>
+    {{>header}}
+    ...
+</html>
+
+```
+
+### blog/posts/
+
+Posts should follow (what I take is fairly) standard naming convention:
+
+  `yyyy-mm-dd-blogpost.(md|markdown|html)`
+
+Posts should begin with the following frontmatter:
+```
+---
+title: "YourPostTitle"
+template: "NameOfYourTemplate"
+---
+
+/* Begin post here */
+```
+
+## Installation
+
 Install with `npm`: `npm install -D tickle-js-ssg`
-Then
+Then in your project `root`, you'd have a `build` file where you run:
 ```javascript
 'use strict';
 const Tickle = require('tickle-js-ssg');
 
 const config = require('path/to/your/_config.json')
-// By default, Tickle looks for your a confiuration file in your project root called `_config.json`.
+// By default, Tickle looks for your a configuration file in your project root called `_config.json`.
 
 function generate() {
   Tickle(config);
@@ -32,7 +85,7 @@ function generate() {
 generate(); // run generate() to :rocket:
 ```
 
-Your `_config.json` ought to looks like this:
+Your `_config.json` ought to look like this:
 ```json
 {
   "site_url": "",
@@ -43,4 +96,4 @@ Your `_config.json` ought to looks like this:
 NB: At the moment, `site_url` is not used.
 
 ## WIP:
-📆  I'll be adding support for, among other things, partials (~~at some point~~ this is currently being worked on) and automatic generation of an index of posts, based on a given a template.
+📆  I'll be adding support for, among other things, ✓ partials and automatic generation of an index of posts, based on a given a template.
