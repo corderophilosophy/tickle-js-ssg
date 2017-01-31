@@ -67,6 +67,20 @@ template: "NameOfYourTemplate"
 /* Begin post here */
 ```
 
+### _config.json
+
+
+```
+{
+  "site_url": "changethis.com",
+  "base_path": "./_site", <-- important
+  "output": "./public_html", <-- important
+  "clean_dist": true, <-- backs output up to old_output, deletes output
+  "build_index": true <-- creates postIndex.html ./public_html/blog/
+}
+```
+
+
 ## Installation
 
 Install with `npm`: `npm install -D tickle-js-ssg`
@@ -84,16 +98,6 @@ function generate() {
 
 generate(); // run generate() to :rocket:
 ```
-
-Your `_config.json` ought to look like this:
-```json
-{
-  "site_url": "",
-  "base_path": "./_site",
-  "output": "./public_html"
-}
-```
-NB: At the moment, `site_url` is not used.
 
 ## WIP:
 📆  I'll be adding support for, among other things, ✓ partials and automatic generation of an index of posts, based on a given a template.

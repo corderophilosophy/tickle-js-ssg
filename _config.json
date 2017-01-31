@@ -1,5 +1,7 @@
 {
-  "site_url": "",
+  "site_url": "#",
   "base_path": "./_site",
-  "output": "./public_html"
+  "output": "./public_html",
+  "clean_dist": true,
+  "build_index": true
 }

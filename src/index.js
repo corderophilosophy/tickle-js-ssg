@@ -7,12 +7,19 @@ const getPaths = require('./getPaths');
 const clean = require('./clean');
 const generate = require('./generate');
 const build = require('./build');
+const buildIndex = require('./buildIndex');
 
 function Tickle(config) {
-  clean(config.output);
+  if (config.clean_dist === true) {
+    clean(config.output);
+  }
   const _site = getPaths(config.base_path);
   const Site = generate(_site);
   build(Site, config);
+  if (config.build_index === true) {
+    buildIndex(Site, config)
+  }
 }
 
-module.exports = Tickle;
+// module.exports = Tickle;
+Tickle(require('../_config.json'));
