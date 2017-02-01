@@ -21,5 +21,4 @@ function Tickle(config) {
   }
 }
 
-// module.exports = Tickle;
-Tickle(require('../_config.json'));
+module.exports = Tickle;
